@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Button</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  nav {
+    display: flex;
+    list-style: none;
+  }
+  h1 {
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid lightseagreen;
+  }
+  h3 {
+    font-weight: 500;
+  }
+  span {
+    font-weight: normal;
+  }
+  .nav-item {
+    padding: 0 15px;
+  }
+  .button {
+    padding: 10px 15px;
+    border: none;
+    background: lightseagreen;
+    color: white;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+  .button:hover {
+    background: rgba(32, 178, 171, 0.767);
+    cursor: pointer;
+  }
+  .bitcoin {
+    font-style: italic;
+    color:lawngreen;
+  }
+  </style>
+</head>
+<body>
+  <h1>Bitcoin</h1>
+
+  <nav>
+    <li class="nav-item usd"><button class="button">USD</button></li>
+    <li class="nav-item eur"><button class="button">EUR</button></li>
+    <li class="nav-item gbp"><button class="button">GBP</button></li>
+  </nav>
+
+  <h3>Current price: <span class="bitcoin"></span></h3>
+  <button id="update" class="button">Update Price</button>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

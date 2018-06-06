@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    img {
+      height: 400px;
+      width: auto;
+    }
+
+  </style>
+  
+</head>
+<body>
+  <h1>Random Dog</h1>
+  <p id="message">Display message</p>
+  <img id="image">
+  <button id="btn">Click</button>
+  <script>
+    const button = document.querySelector('#btn');
+    const img = document.querySelector('#image');
+    const msg = document.querySelector('#message');
+
+    const getDog = async () => {
+      const dog = await fetch('https://dog.ceo/api/breeds/image/random');
+      
+      if (dog.status === 200) {
+        return dog.json();
+      } else {
+        throw new Error('Something did not work');
+      }
+    }
+
+    button.addEventListener('click', e => {
+      getDog().then(response => {
+        img.setAttribute('src', response.message);
+      }).catch(error => {
+        msg.textContent = error;
+      })
+    });
+  
+  </script>
+</body>
+</html>

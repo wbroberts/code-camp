@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.sky {
+  background: lightblue;
+  width: 100%;
+  height: 50%;
+  animation: bgsunrise 10s linear infinite;
+}
+
+.sun {
+  background: yellow;
+  border-radius: 100%;
+  box-shadow: 0 5px 50px yellow;
+  position: relative;
+  right: 100px;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  animation: sunrise 10s linear infinite;
+}
+
+.ground {
+  background: lightgreen;
+  width: 100%;
+  height: 50%;
+}
+
+@keyframes sunrise {
+  0% {
+    transform: translate(0);
+    background: orange;
+    box-shadow: 0 5px 100px orange;
+  }
+  25% {
+    transform: translate(20vw, -100px);
+  }
+  50% {
+    background: yellow;
+    transform: translate(50vw, -350px);
+    box-shadow: 0 5px 100px yellow;
+  }
+  60% {
+    transform: translate(60vw, -300px);
+  }
+  80% {
+    transform: translate(80vw, -100px);
+  }
+  100% {
+    background: orangered;
+    transform: translate(100vw);
+    box-shadow: 0 5px 100px orangered;
+  }
+}
+
+@keyframes bgsunrise {
+  0% {
+    background: darkblue;
+  }
+  20% {
+    background: pink;
+  }
+  40% {
+    background: lightblue;
+  }
+  60% {
+    background: lightblue;
+  }
+  80% {
+    background: lightsalmon;
+  }
+  100% {
+    background: rgb(19, 0, 37);
+  }
+}

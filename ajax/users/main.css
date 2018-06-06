@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:200,400,500');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background: #d8dfe2;
+  color: #2f3638;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Exo', sans-serif;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1 {
+  padding: 40px;
+}
+
+.content {
+  animation: slidein 1s 250ms ease-out forwards;
+  box-shadow: 0 1px 3px #444444; 
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  position: relative;
+  top: -400px;
+  width: 35%;
+}
+
+@keyframes slidein {
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.container {
+  background: #ffffff;
+  display: flex;
+  width: 100%;
+}
+
+.holder {
+  display: flex;
+  width: 100%;
+}
+
+.right,
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  padding: 20px 0;
+}
+
+.left {
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.name {
+  color: #351f39;
+  text-transform: capitalize;
+}
+
+.username {
+  color: #709fb0;
+}
+
+.about {
+  color: #9ea3a5;
+  padding: 10px 0;
+}
+
+.about-content {
+  font-weight: 400;
+}
+
+p {
+  line-height: 145%;
+}
+
+.main-image {
+  border-radius: 100%;
+  height: 100px;
+  width: auto;
+}
+
+.location,
+.email {
+  font-weight: 200;
+}
+.location {
+  text-transform: capitalize;
+}
+
+i {
+  padding-right: 10px;
+}
+
+button {
+  background: #351f39;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 200;
+  outline: none;
+  padding: 15px;
+  text-transform: uppercase;
+  transition: background 300ms ease-in;
+  width: 100%;
+}
+
+button:hover {
+  background: #28172b;
+}
